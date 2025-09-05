@@ -67,7 +67,7 @@ def play_game():
     while not game.is_won() and not game.is_lost():
         print("You have 15 seconds to guess...")
         for remaining in range(15, 0, -1):
-            # print(f"Time left: {remaining} seconds", end='\r')
+            print(f"Time left: {remaining} seconds", end='\r\n')
             i, _, _ = select.select([sys.stdin], [], [], 1)
             if i:
                 guess = sys.stdin.readline().strip().lower()
